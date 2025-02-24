@@ -1,0 +1,12 @@
+.registration, .study-session {
+  position: absolute;
+}
+
+.registration__input {
+  display: block;
+  resize: none;
+}
+
+.study-session {
+  visibility: hidden;
+}
