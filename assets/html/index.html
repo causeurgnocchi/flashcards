@@ -16,8 +16,18 @@
         <textarea class="registration__input" rows="10"></textarea>
         <button class="registration__start" onclick="startStudySession()">Start</button>
       </div>
-      <div class="study-session">
-        in session
+      <div class="study-session hidden">
+        <div class="study-session__card current-card">
+          <p class="current-card__writing"></p>
+          <p class="current-card__reading concealed"></p>
+          <p class="current-card__meaning concealed"></p>
+        </div>
+        <div class="study-session__card-log card-log">
+          <p class="card-log__writing"></p>
+          <p class="card-log__reading concealed"></p>
+          <p class="card-log__meaning concealed"></p>
+        </div>
+        <input class="study-session__input" type="text">
       </div>
     </main>
   </body>
