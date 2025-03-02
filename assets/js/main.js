@@ -45,8 +45,9 @@ class Card {
 }
 
 function startStudySession() {
-    const input = document.querySelector('.registration__input');
-    const lines = input.value.split('\n');
+    const registrationSection = document.querySelector('.registration');
+    const registrationInput = document.querySelector('.registration__input');
+    const lines = registrationInput.value.split('\n');
     const deck = [];
 
     for (let i = 0; i < lines.length; i += 3) {
@@ -54,19 +55,27 @@ function startStudySession() {
         deck.push(card);
     }
 
-    const studySession = new StudySession(deck, [], 0);
-
-    const registrationSection = document.querySelector('.registration');
-    const studySessionSection = document.querySelector('.study-session');
-
     registrationSection.classList.add('hidden');
-    studySessionSection.classList.remove('hidden');
 
+    const studySession = new StudySession(deck, [], 0);
+    const studySessionSection = document.querySelector('.study-session');
     const writing = document.querySelector('.current-card__writing');
     const reading = document.querySelector('.current-card__reading');
     const meaning = document.querySelector('.current-card__meaning');
-
-    writing.textContent = studySession.currentCard.writing;
-    reading.textContent = studySession.currentCard.reading;
-    meaning.textContent = studySession.currentCard.meaning;
+    const readingInput = document.querySelector('.study-session__input--reading');
+    const meaningInput = document.querySelector('.study-session__input--meaning');
+    
+    const keyDownHandler = (e) => {
+        if (e.key === 'Enter') {
+            reading.classList.remove('concealed');
+            meaning.classList.remove('concealed');
+            reading.textContent = studySession.currentCard.reading;
+            meaning.textContent = studySession.currentCard.meaning;
+        }
+    };
+    
+    studySessionSection.classList.remove('hidden');
+    writing.textContent = studySession.currentCard;
+    inputWriting.addEventListener('keydown', keyDownHandler);
+    inputMeaning.addEventListener('keydown', keyDownHandler);
 }
