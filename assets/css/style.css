@@ -1,4 +1,12 @@
-.registration, .study-session {
+.hidden {
+  visibility: hidden;
+}
+
+.concealed {
+  background-color: black;
+}
+
+.registration {
   position: absolute;
 }
 
@@ -7,10 +15,23 @@
   resize: none;
 }
 
-.hidden {
-  visibility: hidden;
+.study-session {
+  position: absolute;
 }
 
-.concealed {
-  background-color: black;
+.study-session__current-card {
+  display: block;
+  position: relative;
+}
+
+.current-card__front {
+  position: absolute;
+}
+
+.current-card__back {
+  position: absolute;
+}
+
+.study-session__input--meaning {
+  display: block;
 }

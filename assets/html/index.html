@@ -14,21 +14,23 @@
     <main>
       <div class="registration">
         <textarea class="registration__input" rows="10"></textarea>
-        <button class="registration__start" onclick="startStudySession()">Start</button>
+        <button class="registration__start" onclick="startStudySession()">
+          Start
+        </button>
       </div>
       <div class="study-session hidden">
-        <div class="study-session__card current-card">
-          <p class="current-card__writing"></p>
-          <p class="current-card__reading concealed"></p>
-          <p class="current-card__meaning concealed"></p>
+        <div class="study-session__current-card current-card">
+          <div class="current-card__front">
+            <p class="current-card__front-writing"></p>
+          </div>
+          <div class="current-card__back hidden">
+            <p class="current-card__back-writing"></p>
+            <p class="current-card__back-reading"></p>
+            <p class="current-card__back-meaning"></p>
+          </div>
         </div>
-        <div class="study-session__card-log card-log">
-          <p class="card-log__writing"></p>
-          <p class="card-log__reading concealed"></p>
-          <p class="card-log__meaning concealed"></p>
-        </div>
-        <input class="study-session__input--reading" type="text">
-        <input class="study-session__input--meaning" type="text">
+        <input class="study-session__input--reading" type="text" />
+        <input class="study-session__input--meaning" type="text" />
       </div>
     </main>
   </body>
