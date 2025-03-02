@@ -1,36 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flashcards</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/index.js"></script>
   </head>
   <body>
     <header>
       <h1>Flashcards</h1>
     </header>
-    <main>
-      <div class="registration">
-        <textarea class="registration__input" rows="10"></textarea>
+    <main class="page__main main">
+      <div class="main__registration registration">
+        <textarea class="registration__input" name="material" rows="10"></textarea>
         <button class="registration__start" onclick="startStudySession()">
           Start
         </button>
-      </div>
-      <div class="study-session hidden">
-        <div class="study-session__current-card current-card">
-          <div class="current-card__front">
-            <p class="current-card__front-writing"></p>
-          </div>
-          <div class="current-card__back hidden">
-            <p class="current-card__back-writing"></p>
-            <p class="current-card__back-reading"></p>
-            <p class="current-card__back-meaning"></p>
-          </div>
-        </div>
-        <input class="study-session__input--reading" type="text" />
-        <input class="study-session__input--meaning" type="text" />
       </div>
     </main>
   </body>

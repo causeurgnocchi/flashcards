@@ -6,7 +6,11 @@
   background-color: black;
 }
 
-.registration {
+.page__main {
+  position: relative;
+}
+
+.main__registration {
   position: absolute;
 }
 
@@ -15,13 +19,17 @@
   resize: none;
 }
 
-.study-session {
-  position: absolute;
+.main__study-session {
+  position: relative;
 }
 
 .study-session__current-card {
-  display: block;
   position: relative;
+}
+
+.current-card {
+  display: block;
+  height: 150px;
 }
 
 .current-card__front {

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="/assets/js/study-session.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Flashcards</h1>
+    </header>
+    <main class="page__main main">
+      <div class="main__study-session study-session">
+        <div class="study-session__current-card current-card">
+          <div class="current-card__front">
+            <p class="current-card__front-writing"></p>
+          </div>
+          <div class="current-card__back hidden">
+            <p class="current-card__back-writing"></p>
+            <p class="current-card__back-reading"></p>
+            <p class="current-card__back-meaning"></p>
+          </div>
+        </div>
+        <div class="study-session__card">
+        </div>
+        <input class="study-session__input--reading" type="text" />
+        <input class="study-session__input--meaning" type="text" />
+      </div>
+    </main>
+  </body>
+</html>
